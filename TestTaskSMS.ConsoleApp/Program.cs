@@ -1,5 +1,5 @@
 ﻿using TestTaskSMS.SMSHttpClient;
-using TestTaskSMS.SMSHttpClient.Model;
+using TestTaskSMS.CommonLibrary.Model;
 using static System.Console;
 using Serilog;
 using Microsoft.Extensions.Configuration;
@@ -50,7 +50,7 @@ while (true)
             if (Int32.Parse(dishInfo[1]) <= 0)
                 throw new Exception();
 
-            orderParams.MenuItems.Add(new Order { Id = dishInfo[0].ToString(), Quantity = dishInfo[1].ToString() });
+            orderParams.MenuItems.Add(new Order { Id = dishInfo[0].ToString(), Quantity = Convert.ToDouble(dishInfo[1]) });
         }
         break;
     }

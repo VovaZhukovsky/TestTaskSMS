@@ -1,10 +1,14 @@
-namespace TestTaskSMS.SMSHttpClient.Model;
+namespace TestTaskSMS.CommonLibrary.Model;
 
 public class BaseResponse
 {
     public string Command { get; set; }
     public bool Success { get; set; } = true;
     public string ErrorMessage { get; set; } = System.String.Empty;
+}
+
+public class SendOrderRespose : BaseResponse
+{
 }
 
 public class GetMenuResponse : BaseResponse

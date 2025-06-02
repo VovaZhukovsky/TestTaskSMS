@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TestTaskSMS.SMSHttpClient.Model;
+using TestTaskSMS.CommonLibrary.Model;
 
 namespace TestTaskSMS.ConsoleApp;
 public class ApplicationContext : DbContext

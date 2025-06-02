@@ -2,8 +2,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Net.Http.Json;
 using Newtonsoft.Json;
-using TestTaskSMS.SMSHttpClient.Model;
-
+using TestTaskSMS.CommonLibrary.Model;
 namespace TestTaskSMS.SMSHttpClient;
 
 public class SMSHttpClient
@@ -53,7 +52,7 @@ public class SMSHttpClient
         return await PostAsync<GetMenuRequest, GetMenuResponse>(request);
     }
     
-        public async Task<BaseResponse> SendOrderAsync(OrderParams orderParams)
+    public async Task<SendOrderRespose> SendOrderAsync(OrderParams orderParams)
     {
         SendOrderRequest request = new()
         {
@@ -61,6 +60,6 @@ public class SMSHttpClient
             CommandParameters = orderParams
 
         };
-        return await PostAsync<SendOrderRequest, BaseResponse>(request);
+        return await PostAsync<SendOrderRequest, SendOrderRespose>(request);
     }
 }

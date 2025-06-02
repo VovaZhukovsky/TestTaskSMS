@@ -1,6 +1,6 @@
-using TestTaskSMS.SMSHttpClient.Interface;
+using TestTaskSMS.CommonLibrary.Interface;
 
-namespace TestTaskSMS.SMSHttpClient.Model;
+namespace TestTaskSMS.CommonLibrary.Model;
 
 public class GetMenuRequest : IRequest<Price>
 {
