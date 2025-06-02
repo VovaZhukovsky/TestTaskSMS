@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTaskSMS.SMSHttpClient", "TestTaskSMS.SMSHttpClient\TestTaskSMS.SMSHttpClient.csproj", "{9C4A8B51-75A1-4559-8D92-E760546A88D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTaskSMS.SMSHttpClient", "TestTaskSMS.SMSHttpClient\TestTaskSMS.SMSHttpClient.csproj", "{9C4A8B51-75A1-4559-8D92-E760546A88D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTaskSMS.ConsoleApp", "TestTaskSMS.ConsoleApp\TestTaskSMS.ConsoleApp.csproj", "{1ECFA2CA-76CF-4CFB-B0D7-DF6CF7A5F9D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTaskSMS.ConsoleApp", "TestTaskSMS.ConsoleApp\TestTaskSMS.ConsoleApp.csproj", "{1ECFA2CA-76CF-4CFB-B0D7-DF6CF7A5F9D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTaskSMS.gRPSClient", "TestTaskSMS.gRPSClient\TestTaskSMS.gRPSClient.csproj", "{CD770253-401E-4375-8E79-3A48E7F008DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTaskSMS.gRPSClient", "TestTaskSMS.gRPSClient\TestTaskSMS.gRPSClient.csproj", "{CD770253-401E-4375-8E79-3A48E7F008DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTaskSMS.WPF", "TestTaskSMS.WPF\TestTaskSMS.WPF.csproj", "{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,8 +57,23 @@ Global
 		{CD770253-401E-4375-8E79-3A48E7F008DE}.Release|x64.Build.0 = Release|Any CPU
 		{CD770253-401E-4375-8E79-3A48E7F008DE}.Release|x86.ActiveCfg = Release|Any CPU
 		{CD770253-401E-4375-8E79-3A48E7F008DE}.Release|x86.Build.0 = Release|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Debug|x64.Build.0 = Debug|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Debug|x86.Build.0 = Debug|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Release|x64.ActiveCfg = Release|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Release|x64.Build.0 = Release|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9DCE129-FA96-43B9-B460-7B38E5DFBDEC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F56BB3EB-DD98-4427-8721-932F21F91387}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,114 @@
+﻿<Window x:Class="TestTaskSMS.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTaskSMS.WPF"
+        xmlns:viewModel="clr-namespace:TestTaskSMS.WPF.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" 
+        Background="Transparent">
+    <Window.DataContext>
+        <viewModel:MainViewModel />
+    </Window.DataContext>
+    <Border Background="White" 
+            CornerRadius="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" 
+                    Background="White" 
+                    CornerRadius="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1" 
+                            Width="30" 
+                            Height="30" 
+                            Click="MinimizeButton_Click" 
+                            Background="Transparent" 
+                            BorderThickness="0" 
+                            Padding="0" 
+                            ToolTip="Свернуть">
+                        <Rectangle Height="4" 
+                                   Width="20" 
+                                   Fill="Black" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   RadiusY="1" 
+                                   RadiusX="1" 
+                                   IsHitTestVisible="False"/>
+                    </Button>
+                    <Button Grid.Column="2"
+                            Width="30" 
+                            Height="30" 
+                            Click="CloseButton_Click" 
+                            Background="Transparent" 
+                            BorderThickness="0" 
+                            Padding="0" 
+                            ToolTip="Закрыть">
+                        <Grid Width="30" Height="30">
+                            <Rectangle Width="4" 
+                                       Height="30" 
+                                       Fill="Black" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center">
+                                <Rectangle.RenderTransform>
+                                    <RotateTransform Angle="45" CenterX="2" CenterY="15"/>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle Width="4" 
+                                       Height="30" 
+                                       Fill="Black" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center">
+                                <Rectangle.RenderTransform>
+                                    <RotateTransform Angle="-45" CenterX="2" CenterY="15"/>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                    </Button>
+                    <TextBlock Grid.Column="0" Text="Тестовое WPF‑приложение для SmartMealService"
+                               VerticalAlignment="Center"
+                               Margin="10"
+                               FontSize="14"/>
+                </Grid>
+            </Border>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding Variables}"
+                      AutoGenerateColumns="False"
+                      Margin="6">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Поле"
+                                        Binding="{Binding Name}"
+                                        IsReadOnly="True"
+                                        Width="2*"/>
+
+                        <DataGridTextColumn Header="Значение"
+                                        Binding="{Binding Value, UpdateSourceTrigger=PropertyChanged}"
+                                        Width="3*"/>
+
+                    <DataGridTextColumn Header="Комментарий"
+                                        IsReadOnly="True"
+                                        Width="3*"/>
+                </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Grid.Row="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        VerticalAlignment="Bottom">
+
+
+                <Button Content="Сохранить изменения"
+                        Width="150"
+                        Height="30"
+                        Command="{Binding SaveVariableCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
